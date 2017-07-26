@@ -66,7 +66,7 @@ for i in saves:
 print("\n1. Backup\n2. Switch Character\n3. Exit")
 chosen = False
 while not chosen:
-    choice = input("> ")
+    choice = str(input("> "))
     if choice == "1":
         backup(gamedir, saves)
         chosen = True
