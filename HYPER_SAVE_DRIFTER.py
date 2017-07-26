@@ -40,9 +40,10 @@ elif platform == "darwin":
 elif platform == "win32":
     gamedir = os.path.expanduser("~/AppData/Local/HyperLightDrifter")
 
-if not os.path.exists(gamedir):
-    print("Could not find game directory.")
-    exit()
+if platform != "darwin":
+    if not os.path.exists(gamedir):
+        print("Could not find game directory.")
+        exit()
 
 files = os.listdir(gamedir)
 saves = []
