@@ -36,14 +36,14 @@ def switch(dir, svs):
 if platform == "linux" or platform == "linux2":
     gamedir = os.path.expanduser("~/.config/HyperLightDrifter")
 elif platform == "darwin":
-    gamedir = os.path.expanduser("~/Library/Application\ Support/com.HeartMachine.HyperLightDrifter")
+    gamedir = os.path.expanduser("~/Library/Application Support/com.HeartMachine.HyperLightDrifter")
 elif platform == "win32":
     gamedir = os.path.expanduser("~/AppData/Local/HyperLightDrifter")
 
-if platform != "darwin":
-    if not os.path.exists(gamedir):
-        print("Could not find game directory.")
-        exit()
+
+if not os.path.exists(gamedir):
+    print("Could not find game directory.")
+    exit()
 
 files = os.listdir(gamedir)
 saves = []
